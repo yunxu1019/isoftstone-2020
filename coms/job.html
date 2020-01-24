@@ -1,0 +1,5 @@
+<div class="name">
+    <div class="loading" ng-if="item.is_loading">加载中..</div>
+    <a class="name" ng-click="open()" ng-bind=item.title></a>
+    <span class="time" ng-bind="time(item.time*1000)"></span>
+</div>

@@ -1,0 +1,16 @@
+{
+    "https://hacker-news.firebaseio.com/v0/": {
+        "story": "get item/:id.json?print=pretty",
+        "comment": "get item/:id.json?print=pretty",
+        "job": "get item/:id.json?print=pretty",
+        "ask": "get item/:id.json?print=pretty",
+        "poll": "get item/:id.json?print=pretty",
+        "parts": "get item/:id.json?print=pretty",
+        "user": "get user/:id.json?print=pretty",
+        "item": "get user/:id.json?print=pretty",
+        "max-item":"get maxitem.json?print=pretty",
+        "top-most":"get topstories.json?print=pretty",
+        "show-job":"get askstories.json?print=pretty",
+        "changes":"get updates.json?print=pretty"
+    }
+}

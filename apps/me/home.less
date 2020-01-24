@@ -1,0 +1,61 @@
+.bg {
+    position      : relative;
+    // z-index    : -1;
+    width         : 100%;
+    padding-top   : 61.8%;
+    background    : url('./images/bg.jpg') no-repeat 0 100% /cover;
+    perspective   : 1200px;
+}
+
+
+
+.name {
+    position : absolute;
+    font-size: 40px;
+    top      : 46%;
+    left     : 57%;
+    color    : #666;
+    transform: rotate3d(1, 1, 1, 6deg);
+}
+
+.desc {
+    position     : absolute;
+    transform    : rotate3d(1, 1, 1, 6deg);
+    font-size    : 18px;
+    color        : #666;
+    top          : 68%;
+    left         : 56%;
+    width        : 40%;
+}
+
+.media(@width, @size1, @size2) {
+
+    @media (max-width:@width) {
+        .name {
+            font-size: @size1;
+        }
+
+        .desc {
+            font-size: @size2;
+        }
+    }
+}
+
+.media(720px, 28px, 14px);
+.media(480px, 20px, 12px);
+.media(360px, 12px, 0);
+.media(240px, 0, 0);
+
+&>.pages {
+    height : 100%;
+    display: block;
+}
+
+& {
+    height    : 100%;
+    font-size : 16px;
+    width     : 100%;
+    max-width : 1024px;
+    background: inherit;
+    margin    : 0 auto;
+}

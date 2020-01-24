@@ -1,0 +1,1 @@
+03qcreateVboxWithState,state,data,render,list,item,cless,c,d,e,f,g,h,ifunction j(j){var b=c(d);b.innerHTML=a;var i=e.from(j.actionId);return f(b,{list:g,item:h,items:i}),b}var a,b,b=a={toString:function(){return'<list ng-src="i in items"><item _newsId=i></item></list>'}};return i(j,'.-rc list{padding-top:50px}','-rc news news')

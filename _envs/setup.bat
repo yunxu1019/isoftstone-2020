@@ -1,0 +1,1 @@
+if not defined app set app=me

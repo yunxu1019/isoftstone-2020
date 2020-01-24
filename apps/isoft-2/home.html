@@ -1,0 +1,6 @@
+<div class="title-bar">
+    <item type=white ng-class="{active:t===activePage}" ng-click="view(t,pages)" class="item" ng-repeat="t in tags">
+        <span ng-bind="t.name"></span>
+    </item>
+</div>
+<slider elementid=pages class="pages"></slider>

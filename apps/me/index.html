@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+    http://efront.cc/me/
+-->
+<html lang="zh-CN">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,width=device-width" />
+    <title>个人简历-王勇慧</title>
+    <script>
+        cross_host = "http://47.254.88.103/";
+        // this.cross_host = "http://efront.cc/";
+    </script>
+
+    <script deleteoncompile>
+        -function (body, window) {
+            body.removeChild(body.getElementsByTagName("script")[0]);
+            var xhr = new (window.XMLHttpRequest || ActiveXObject)('Microsoft.XMLHTTP');
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    new Function(xhr.responseText).call(window);
+                }
+            };
+            xhr.open('POST', 'comm/main');
+            xhr.send("step into my sight..");
+        }.call(this, document.documentElement.children[0], this);
+    </script>
+    <script type="deleteoncompile" src="images/*"></script>
+</head>
+
+<body scroll=no max-render=1280 main-path="/main"></body>
+
+</html>
