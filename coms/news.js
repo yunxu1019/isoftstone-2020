@@ -6,6 +6,6 @@ function main(t) {
         list,
         item,
         items
-    })
+    });
     return page;
 }
