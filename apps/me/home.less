@@ -1,31 +1,51 @@
-.bg {
+.title {
     position      : relative;
     // z-index    : -1;
     width         : 100%;
     padding-top   : 61.8%;
     background    : url('./images/bg.jpg') no-repeat 0 100% /cover;
     perspective   : 1200px;
+
+    >.bg {
+        position  : absolute;
+        background: inherit;
+        left      : 0;
+        right     : 0;
+        bottom    : 0;
+        top       : 0;
+    }
+
+    &::before {
+        transform      : rotate3d(1, 1, 1, 6deg);
+        background     : linear-gradient(162deg, #f1faf988, #deedea88);
+        backdrop-filter: blur(10px);
+        position       : absolute;
+        content        : "";
+        display        : block;
+        left           : 57%;
+        width          : 40%;
+        top            : 46%;
+        height         : 30%;
+    }
 }
 
-
-
-.name {
+.info {
     position : absolute;
-    font-size: 40px;
     top      : 46%;
     left     : 57%;
-    color    : #666;
-    transform: rotate3d(1, 1, 1, 6deg);
+    width    : 40%;
+    padding  : 10px 0;
+    transform: rotate3d(6, 7, 13, 6deg);
+    color    : #000;
+}
+
+.name {
+    font-size: 40px;
 }
 
 .desc {
-    position     : absolute;
-    transform    : rotate3d(1, 1, 1, 6deg);
-    font-size    : 18px;
-    color        : #666;
-    top          : 68%;
-    left         : 56%;
-    width        : 40%;
+    font-size : 18px;
+    margin-top: 18px;
 }
 
 .media(@width, @size1, @size2) {
