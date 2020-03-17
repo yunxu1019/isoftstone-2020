@@ -1,1 +1,0 @@
-01arequestAnimationFrame,afunction b(b){return function c(){if(c.ing)return c.ing=!0;b(),c.ing=a(function(){c.ing===!0&&b(),c.ing=!1})}}return b
