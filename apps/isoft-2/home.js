@@ -1,7 +1,3 @@
-put('/hot', news);
-put('/max', news);
-put('/top', news);
-put('/new', news);
 
 var tags = `
 News-Reader /hot top-most
