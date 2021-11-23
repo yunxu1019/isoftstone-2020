@@ -31,7 +31,7 @@ function main() {
                 }
                 var t = tags[index];
                 if (!t) return;
-                return t.news ? t.news : t.news = news(t);
+                return t.news ? t.news : t.news = news(t, t.path);
             });
             pages.go(state().page || 0);
             return pages;
