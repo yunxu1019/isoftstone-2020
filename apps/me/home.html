@@ -4,11 +4,55 @@
         <div class="name">
             王勇慧
         </div>
+        <div>
+            1992年，汉族，男，172厘米，60公斤
+        </div>
         <div class="desc">
-            王勇慧，1992年11月13日出生于河南省兰考县，毕业于苏州科技学院，中国内地软件工作者、理学学士。
+            自己实现过不依赖第三方库的前端框架、从主法解析到开发环境搭建到编译降级一整套，并开发了相应的组件库和一些相关项目。现有的流行框架也均在项目中使用过，不过还是喜欢不依赖框架去开发。
+        </div>
+        <div class="contact">
+            邮箱：<a href="mailto:yunxu1019@live.cn">yunxu1019@live.cn</a>
+            <br/>
+            手机：<a href="tel:13460670634">13460670634</a>
         </div>
     </div>
 </div>
-<list ng-src="i in items">
-    <item></item>
-</list>
+<div job>
+    <div exp>
+        <span> 学习或工作经历 </span>
+        <select -model="desc" @change="sort()">
+            <option value="0"> 时间正序 </option>
+            <option value="1"> 时间倒序 </option>
+        </select>
+    </div>
+    <padding ng-repeat="m in items">
+        <div>
+            <span -if="m.icon" .icon -style="{backgroundImage:'url(\'images/'+m.icon+'\')'}"></span>
+            <span -else .icon2></span>
+            <span .name -bind="m.institution"></span>
+        </div>
+        <div .position>
+            <span .time -bind="time(m.time)"></span>
+            <span -bind="m.position"></span>
+        </div>
+        <p .desc -bind="m.job"></p>
+    </padding>
+</div>
+<div pro>
+    <div exp>
+        <span> 项目经历 </span>
+        <select -model="desc" @change="sort()">
+            <option value="0"> 时间正序 </option>
+            <option value="1"> 时间倒序 </option>
+        </select>
+    </div>
+    <template ng-repeat="m in items">
+        <padding ng-repeat="o in m.projects">
+            <span -if="o.icon||m.icon" .icon -style="{backgroundImage:'url(\'images/'+(o.icon||m.icon)+'\')'}"></span>
+            <span -else .icon2></span>
+            <span .name -bind="o.name"></span>
+            <p .desc -bind="o.description"></p>
+            <a -if="o.link" _href="o.link" -bind="o.link"></a>
+        </padding>
+    </template>
+</div>

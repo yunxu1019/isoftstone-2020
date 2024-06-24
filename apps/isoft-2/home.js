@@ -6,7 +6,7 @@ News-Reader /hot top-most
     return { name, path, actionId, index: cx };
 });
 function main() {
-    var page = createElement(div);
+    var page = document.createElement("div");
     page.initialStyle = 'transform:scale(.9);opacity:0;';
     page.innerHTML = home;
     render(page, {
