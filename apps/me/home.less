@@ -15,6 +15,7 @@
 
     .contact {
         margin-top: 6px;
+
         a {
             line-height: 1.6;
             vertical-align: top;
@@ -62,6 +63,20 @@
     }
 }
 
+>[config] {
+    display: block;
+
+    >a {
+        margin-left: 20px;
+        vertical-align: top;
+    }
+
+    checker {
+        margin-top: -6px;
+        vertical-align: middle;
+    }
+}
+
 .info {
     position: absolute;
     top: 46%;
@@ -95,16 +110,18 @@ each(@a, (@value) {
         @p: 100/@value;
 
         @media all and (min-width:@w) {
-            >[job] {
+
+            >[job],
+            >[prj] {
                 font-size: 0;
 
-                >padding {
+                padding {
                     font-size: 16px;
                     width:@{p}%;
                     display: inline-block;
                 }
 
-                >padding:only-child {
+                padding:only-child {
                     display: block;
                     width: 100%;
                 }
@@ -126,6 +143,29 @@ each(@a, (@value) {
     margin: 0 auto;
 }
 
+>[prj] {
+    display: block;
+
+    >div {
+        border: 1px dashed #0003;
+        margin-bottom: 10px;
+    }
+
+    padding[ins] {
+        width: 100%;
+        background: none;
+        border: none;
+        outline: none;
+    }
+
+    padding {
+        outline: 2px solid #fff;
+        outline-offset: -12px;
+        background: #f6f9fc;
+        border: 8px solid #fff;
+    }
+}
+
 >[pro] {
     padding {
         outline: 10px solid #f2f6fc;
@@ -137,6 +177,7 @@ each(@a, (@value) {
 }
 
 >[job],
+>[prj],
 >[pro] {
 
     >[exp] {

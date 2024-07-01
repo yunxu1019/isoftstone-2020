@@ -13,10 +13,11 @@ function main() {
         image.style.top = fromOffset(scrollTop);
         // console.log(image, scrollTop)
     });
-    var src = [];
     render(page, {
         padding,
         lattice,
+        ignore: true,
+        follow: true,
         a: button,
         time(t) {
             if (t instanceof Array) return t.map(this.time, this).join(',');
@@ -35,10 +36,19 @@ function main() {
                 return a - b;
             });
         },
+        refresh() {
+            var items = experience.slice();
+            if (this.ignore) {
+                items = items.filter(a => !a.ignore);
+            }
+            this.schools = items.filter(a => a.study);
+            this.items = items;
+        },
         desc: 1,
+        checker,
         item: job,
         experience,
-        items: experience
+        items: experience.filter(a => !a.ignore)
     });
     return page;
 }
