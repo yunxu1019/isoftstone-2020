@@ -7,17 +7,19 @@ var getTime = function (a, desc) {
 function main() {
     var page = document.createElement('div');
     page.innerHTML = home;
+
     on("scroll")(page, function (event) {
         var { scrollTop } = this;
         var image = this.querySelector(".bg");
         image.style.top = fromOffset(scrollTop);
         // console.log(image, scrollTop)
     });
-    render(page, {
+    var scope = {
         padding,
         lattice,
         ignore: true,
         follow: true,
+        hr: true,
         a: button,
         time(t) {
             if (t instanceof Array) return t.map(this.time, this).join(',');
@@ -41,6 +43,12 @@ function main() {
             if (this.ignore) {
                 items = items.filter(a => !a.ignore);
             }
+            if (this.hr) {
+                items = items.filter(a => a.hr);
+            }
+            else {
+                items = items.filter(a => a.hr !== 2);
+            }
             this.schools = items.filter(a => a.study);
             this.items = items;
         },
@@ -48,7 +56,9 @@ function main() {
         checker,
         item: job,
         experience,
-        items: experience.filter(a => !a.ignore)
-    });
+        items: experience
+    };
+    scope.refresh();
+    render(page, scope);
     return page;
 }

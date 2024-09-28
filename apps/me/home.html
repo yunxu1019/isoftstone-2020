@@ -24,6 +24,9 @@
     <a @click="follow=!follow;refresh()">
         <checker -value="follow"></checker><span>项目紧随公司</span>
     </a>
+    <a @click="hr=!hr;refresh()">
+        <checker -value="hr"></checker><span>为招聘人员优化</span>
+    </a>
 </div>
 
 <div job -if="!follow">
