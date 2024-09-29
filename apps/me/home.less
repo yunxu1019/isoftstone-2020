@@ -93,11 +93,13 @@
     transform: rotate3d(6, 7, 13, 6deg);
     color: #000;
 }
-@media all and (max-width:319px){
-    .desc{
+
+@media all and (max-width:319px) {
+    .desc {
         display: none;
     }
 }
+
 @media all and (min-width:1024px) {
     .title {
         font-size: 20px;
@@ -201,6 +203,7 @@ each(@a, (@value) {
         outline-offset: -12px;
         background: #f6f9fc;
         border: 8px solid #fff;
+        border-top: none;
     }
 }
 
