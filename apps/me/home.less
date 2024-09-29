@@ -42,7 +42,7 @@
 
     .desc {
         font-size: 14px;
-        font-size: 2vw;
+        font-size: 1.8vw;
         margin-top: 6px;
         margin-top: 1vw;
         margin-left: -30px;
@@ -93,6 +93,34 @@
     transform: rotate3d(6, 7, 13, 6deg);
     color: #000;
 }
+@media all and (max-width:319px){
+    .desc{
+        display: none;
+    }
+}
+@media all and (min-width:1024px) {
+    .title {
+        font-size: 20px;
+
+        .contact {
+            margin-top: 10px;
+        }
+
+        .name {
+            font-size: 26px;
+        }
+
+        .desc {
+            font-size: 20px;
+            margin-left: -20px;
+            margin-top: 10px;
+        }
+    }
+
+    .info {
+        padding: 8px 0;
+    }
+}
 
 .icon,
 .icon2 {
@@ -136,6 +164,8 @@ each(@a, (@value) {
         }
     });
 
+
+
 &>.pages {
     height: 100%;
     display: block;
@@ -149,6 +179,7 @@ each(@a, (@value) {
     background: inherit;
     margin: 0 auto;
 }
+
 
 >[prj] {
     display: block;
