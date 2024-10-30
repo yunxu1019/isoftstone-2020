@@ -5,7 +5,7 @@
 
 .title {
     position: relative;
-    // z-index    : -1;
+    // z-index: -1;
     width: 100%;
     padding-top: 52.8%;
     background: url('images/bg.jpg') no-repeat 0 100%/cover;
@@ -146,10 +146,9 @@ each(@a, (@value) {
         @w: @value*300px;
         @p: 100/@value;
 
-        @media all and (min-width:@w) {
+        @media all and (min-width: @w) {
 
-            >[job],
-            >[prj] {
+            >[job] {
                 font-size: 0;
 
                 padding {
@@ -196,6 +195,9 @@ each(@a, (@value) {
         background: none;
         border: none;
         outline: none;
+    }
+    padding[eps]{
+        width: 100%;
     }
 
     padding {
