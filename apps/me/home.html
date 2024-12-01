@@ -111,10 +111,13 @@
             </div>
             <p .desc -bind="m.job"></p>
         </padding>
-        <padding eps ng-repeat="o in m.projects">
-            <span .name -bind="o.name"></span>
-            <p .desc -bind="o.description"></p>
-            <a -if="o.link" _href="o.link" -bind="o.link"></a>
-        </padding>
+        <div .projects -if="m.projects?.length">
+            <div .header></div>
+            <padding eps ng-repeat="o in m.projects">
+                <span .name -bind="o.name"></span>
+                <p .desc -bind="o.description"></p>
+                <a -if="o.link" _href="o.link" -bind="o.link"></a>
+            </padding>
+        </div>
     </div>
 </div>
